@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h1>{{salary |currency:'AED'}}</h1>
+  
+  <div class="row">
+
+  <div class="col-md-3" *ngFor="let p of plog;let i= index">
+
+    <a [routerLink]="['/plog',i]">
+      <img src="{{p.urlToImage}}" class="img-fluid"/>
+      <h3>{{p.title}}</h3>
+      <p>{{i}}</p>
+      <p>{{p.description|sub:80}}</p>
+    </a>
+    <button class="btn btn-default">
+    <a href="{{p.url  }}" target="_blank">
+      source
+    </a>
+    </button>
+  </div>
+
+</div>
+
+</div>
